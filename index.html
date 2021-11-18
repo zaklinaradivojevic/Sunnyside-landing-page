@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:wght@500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
@@ -22,24 +21,11 @@
 </head>
 
 <body>
-  <section id="top-section">
-    <!--menu toggler---->
-    <nav>
-      <button class='hide-lg right'>
-        <svg class="humburger" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
-        </svg>
-      </button>
-      <ul>
-        <li><a class="link" href="#about">About</a></li>
-        <li><a class="link" href="#services">Services</a></li>
-        <li><a class="link" href="#projects">Projects</a></li>
-        <li><a class="contact" href="#contact"><strong>Contact</strong></a></li>
-      </ul>
-    </nav>
-    <!--end of navbar-->
-    <!--header section-->
-    <div class="header">
+  <section class="header_section">
+    <header class="main_header">
+      <img class="header-img"
+        src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-header.jpg?raw=true"
+        alt="header">
       <div class="logo-svg">
         <svg class="logo" width="124" height="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -47,163 +33,174 @@
             fill="#FFF" fill-rule="nonzero" />
         </svg>
       </div>
-      <img class="header-img"
-        src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-header.jpg?raw=true"
-        alt="header">
+      <button class="mobile-menu" id="mobile-menu" onclick="openMenu()">
+        <svg class="humburger" id="humburger" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+        </svg>
+      </button>
+      <nav class="toggle_nav" id="toggle">
+        <span onclick="closeMenu()" class="close" id="close" title="Close Modal">&times;</span>
+        <ul>
+          <li><a class="link" href="#about">About</a></li>
+          <li><a class="link" href="#services">Services</a></li>
+          <li><a class="link" href="#projects">Projects</a></li>
+          <li><a class="contact" href="#contact"><strong>Contact</strong></a></li>
+        </ul>
+      </nav>
+      <div class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <button class="contact">
+          <a href="#contact" class="contact_a">Contact</a>
+        </button>
+      </div>
       <h1 class="header-text">We are creatives</h1>
-      <!---arrow bouncing-->
       <svg class="arrow-down" width="36" height="114" xmlns="http://www.w3.org/2000/svg">
         <g stroke="#FFF" stroke-width="6" fill="none" fill-rule="evenodd" stroke-linecap="round"
           stroke-linejoin="round">
           <path d="M18 3v100M3 95.484l15 15 15-15" />
         </g>
       </svg>
-    </div>
+    </header>
   </section>
-  <!--end of header section-->
-  <!----------About Section------------------------------->
-  <section id="about">
+  <section class="about" id="about">
     <div class="row">
       <div class="column">
-        <div class="brend">
+        <div class="content">
           <h3 class="card-title">Transform your<br> brand</h3>
           <p class="card-text">We are a full-service creative agency specializing in helping brands grow fast.
             Engage your clients through compelling visuals that do most of the marketing for you.</p>
           <p class="card-info">Learn more</p>
+          <div class="line"></div>
         </div>
       </div>
-
       <div class="column">
-        <img class="card-img"
+        <img class="column_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-transform.jpg?raw=true"
-          alt="egg">
+          alt="slika1">
       </div>
-      <div class="column">
-        <img class="card-img"
+    </div>
+    <div class="row">
+      <div class="column" id="lamp">
+        <img class="column_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-stand-out.jpg?raw=true"
-          alt="stand-out">
+          alt="slika2">
       </div>
       <div class="column">
-        <div class="brend">
+        <div class="content" id="content_text">
           <h3 class="card-title">
             Stand out to the right <br> audience</h3>
           <p class="card-text">Using collaborative formula of designes,researches,<br>photographers,videographers,and
             copywriters,we`ll build and extend your brand in digital places.</p>
           <p id="card-info" class="card-info">Learn more</p>
+          <div class="line1"></div>
         </div>
       </div>
-      <div class="column">
-        <div class="thumbnail">
-          <img class="card-img"
-            src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-graphic-design.jpg?raw=true"
-            alt="graphic-design">
-          <div class="caption">
-            <h3 class="card-img-title">Graphic Design</h3>
-            <p class="card-img-text">Great design makes you memorable.We deliver artwork that underscopes your brand
-              message and capture potential client`s attention.</p>
-          </div>
+    </div>
+    <div class="row">
+      <div class="column" id="tresnje">
+        <img class="column_img"
+          src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-graphic-design.jpg?raw=true"
+          alt="graphic-design">
+        <div class="caption">
+          <h3 class="card-img-title">Graphic Design</h3>
+          <p class="card-img-text">Great design makes you memorable.We deliver artwork that underscopes your brand
+            message and capture potential client`s attention.</p>
         </div>
       </div>
-
-      <div class="column">
-        <div class="thumbnail">
-          <img class="card-img"
-            src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-photography.jpg?raw=true"
-            alt="photography">
-          <div class="caption">
-            <h3 id="card-img-title" class="card-img-title">Photography</h3>
-            <p id="card-image-text" class="card-img-text">Increase your credibility by getting the most stunning,height
-              quality photos that improve your buisnise image.</p>
-          </div>
+      <div class="column" id="narandza">
+        <img class="column_img"
+          src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-photography.jpg?raw=true"
+          alt="photography">
+        <div class="caption">
+          <h3 id="card-img-title" class="card-img-title">Photography</h3>
+          <p id="card-image-text" class="card-img-text">Increase your credibility by getting the most stunning,height
+            quality photos that improve your buisnise image.</p>
         </div>
       </div>
     </div>
   </section>
-  <!------------------------end---of---About---section----------------------->
-  <!--profile cards-->
-  <section id="services">
-    <div class="wrapper">
-      <header id="header">
-        <h1>CLIENT TESTIMONIALS</h1>
-      </header>
-      <div class="box">
-        <div class="image">
+  <section class="testemonials" id="services">
+    <h1 class="testemonials-title">CLIENT TESTIMONIALS</h1>
+    <div class="testemonials-content">
+      <div class="testemonials-card" id="first-card">
+        <div class="testemonials-image">
           <img class="testemonial-img"
             src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/image-emily.jpg?raw=true" alt="emily">
         </div>
-        <div class="content">
+        <div class="testemonials-content">
           <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+            thuratu. </p>
         </div>
-        <div class="info">
-          <div class="name">Emily R.</div>
-          <div class="job">Marketing Director</div>
-
-
+        <div class="testemonials-info">
+          <div class="testemonials-name">Emily R.</div>
+          <div class="testemonials-job">Marketing Director</div>
         </div>
       </div>
-      <div class="box">
-        <div class="image">
+      <div class="testemonials-card" id="second-card">
+        <div class="testemonials-image">
           <img class="testemonial-img"
             src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/image-thomas.jpg?raw=true"
             alt="thomas">
         </div>
-        <div class="content">
+        <div class="testemonials-content">
           <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+            thuratu.</p>
         </div>
-        <div class="info">
-          <div class="name">Tomas S.</div>
-          <div class="job">Chief Operating Officer</div>
+        <div class="testemonials-info">
+          <div class="testemonials-name">Tomas S.</div>
+          <div class="testemonials-job">Chief Operating Officer</div>
 
         </div>
-
-
       </div>
-      <div class="box">
-        <div class="image">
+      <div class="testemonials-card" id="tird-card">
+        <div class="testemonials-image">
           <img class="testemonial-img"
             src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/image-jennie.jpg?raw=true"
             alt="jennie">
         </div>
-        <div class="content">
+        <div class="testemonials-content">
           <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+            thuratu.</p>
         </div>
-        <div class="info">
-          <div class="name">Jenny F.</div>
-          <div class="job">Business Owner</div>
+        <div class="testemonials-info">
+          <div class="testemonials-name">Jenny F.</div>
+          <div class="testemonials-job">Business Owner</div>
         </div>
 
       </div>
     </div>
-
   </section>
-  <!-----Projects section ----------------------->
-  <section id="projects">
+  <section class="projects" id="projects">
     <div class="project-box">
       <div class="project-content">
-        <img class="project-img"
+        <img class="project-img" id="project1_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-gallery-milkbottles.jpg?raw=true"
           alt="milk">
-        <img class="project-img"
+      </div>
+      <div class="project-content">
+        <img class="project-img" id="project2_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-gallery-orange.jpg?raw=true"
           alt="orange">
-        <img class="project-img"
+      </div>
+      <div class="project-content">
+        <img class="project-img" id="project3_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-gallery-cone.jpg?raw=true"
           alt="cone">
-        <img class="project-img"
+      </div>
+      <div class="project-content">
+        <img class="project-img" id="project4_img"
           src="https://github.com/zaklinaradivojevic/sannyside/blob/main/images/desktop/image-gallery-sugarcubes.jpg?raw=true"
           alt="sugarcubes">
       </div>
     </div>
+
   </section>
-  <!-------- end of project section ------>
-  <!--footer-->
-  <section id="contact">
+  <section class="footer" id="contact">
     <div class="attribution">
       <div class="footer-logo">
-        <h1 id="logo">sunnyside</h1>
+        <h1 class="foot_logo">sunnyside</h1>
       </div>
       <div class="footer_links">
         <a class="footer-link" href="#about">About</a>
@@ -222,7 +219,7 @@
       </div>
     </div>
   </section>
-  <!----end of footer section ------>
+  <script src="index.js"></script>
 </body>
 
 </html>
