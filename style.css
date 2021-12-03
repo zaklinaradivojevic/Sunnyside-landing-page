@@ -651,6 +651,7 @@ nav > ul > li > a {
     right: 2em;
     position: absolute;
     border: none;
+    display:none;
     background-color: transparent !important;
   }
   .hamburger {
@@ -658,6 +659,7 @@ nav > ul > li > a {
     margin-top: -470px;
     right: 2em;
     position: absolute;
+    display: none;
   }
 
   nav {
@@ -923,6 +925,22 @@ nav > ul > li > a {
     font-size: 0.6em;
     line-height: 30px;
   }
+  .mobile-menu {
+    float: right;
+    margin-top: -470px;
+    right: 2em;
+    position: absolute;
+    border: none;
+    display:none;
+    background-color: transparent !important;
+  }
+  .hamburger {
+    float: right;
+    margin-top: -470px;
+    right: 2em;
+    position: absolute;
+    display: none;
+  }
 }
 /*iPad*/
 @media screen and (max-width: 768px) {
@@ -1156,6 +1174,7 @@ nav > ul > li > a {
     right: 2em;
     position: absolute;
     border: none;
+    display: none;
     background-color: transparent !important;
   }
   .hamburger {
@@ -1163,6 +1182,7 @@ nav > ul > li > a {
     margin-top: -470px;
     right: 2em;
     position: absolute;
+    display:none;
   }
 
   nav {
@@ -1578,6 +1598,7 @@ nav > ul > li > a {
     right: 2em;
     position: absolute;
     border: none;
+    display: block;
     background-color: transparent !important;
   }
   .hamburger {
@@ -1585,6 +1606,7 @@ nav > ul > li > a {
     margin-top: -470px;
     right: 2em;
     position: absolute;
+    display: block;
   }
 
   nav {
@@ -2204,3 +2226,4 @@ nav > ul > li > a {
     color: white;
   }
 }
+
